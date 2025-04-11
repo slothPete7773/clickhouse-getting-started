@@ -5,6 +5,8 @@ services:
     user: '101:101'
     container_name: clickhouse
     hostname: clickhouse
+    environment:
+      - CLICKHOUSE_PASSWORD=123456
     volumes:
       - ./clickhouse/fs/volumes/clickhouse/etc/clickhouse-server/config.d/config.xml:/etc/clickhouse-server/config.d/config.xml
       - ./clickhouse/fs/volumes/clickhouse/etc/clickhouse-server/users.d/users.xml:/etc/clickhouse-server/users.d/users.xml
